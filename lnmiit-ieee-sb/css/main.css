@@ -727,21 +727,21 @@ ul.social-icons li {
   font-size: 30px;
   color: #fff;
 }
-.service-page .service-parts .block {
+.events-page .events-parts .block {
   margin-bottom: 40px;
   text-align: center;
 }
-.service-page .service-parts .block i {
+.events-page .events-parts .block i {
   font-size: 35px;
   color: #02bdd5;
 }
-.service-page .service-parts .block p {
+.events-page .events-parts .block p {
   padding: 0 8px;
   font-size: 14px;
   color: #777;
   line-height: 1.7;
 }
-.works.service-page figure .buttons {
+.works.events-page figure .buttons {
   position: absolute;
   top: 45%;
   left: 13%;
