@@ -52,6 +52,33 @@
         <script src="js/jquery.fancybox.js"></script>
         <!-- template main js -->
         <script src="js/main.js"></script>
+       	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+
+			// Make sure this.hash has a value before overriding default behavior
+			if (this.hash !== "") {
+			  // Prevent default anchor click behavior
+			  event.preventDefault();
+
+			  // Store hash
+			  var hash = this.hash;
+
+			  // Using jQuery's animate() method to add smooth page scroll
+			  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+			  $('html, body').animate({
+				scrollTop: $(hash).offset().top
+			  }, 800, function(){
+
+				// Add hash (#) to URL when done scrolling (default click behavior)
+				window.location.hash = hash;
+			  });
+			} // End if
+		  });
+		});
+		</script>
     </head>
     <body>
         <!--
@@ -88,8 +115,7 @@
                             <li><a href="about.html">About</a></li>
                             <li><a href="events.html">Events</a></li>
                             <li><a href="team.html">Team</a></li>
-                            <li><a href="contact.php">Contact</a></li>
-
+                            <li><a class="scroll-link" href="#footer">Contact</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -147,7 +173,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="block wow fadeInRight" data-wow-delay=".3s" data-wow-duration="500ms">
-                                <img src="images/about/about.jpg" alt="">
+                                <img src="images/about/about.jpg" alt="" align="right" height="300" width="300">
                             </div>
                         </div>
                     </div>
@@ -172,13 +198,13 @@
                                     <img src="images/portfolio/item-1.jpg" class="img-responsive" alt="this is a title" >
                                     <div class="overlay">
                                         <div class="buttons">
-                                          <a target="_blank" href="talks.html">Details</a>
+                                          
                                         </div>
                                     </div>
                                 </div>
                               <figcaption>
                                 <h4>
-                                <a href="talks.html">
+                                <a href="events.html">
                                   TALKS
                                 </a>
                                 </h4>
@@ -191,13 +217,13 @@
                                     <img src="images/portfolio/item-2.jpg" class="img-responsive" alt="this is a title" >
                                     <div class="overlay">
                                         <div class="buttons">
-                                          <a target="_blank" href="workshops.html">Details</a>
+                                         
                                         </div>
                                     </div>
                                 </div>
                               <figcaption>
                                 <h4>
-                                <a href="workshops.html">
+                                <a href="events.html">
                                   WORKSHOPS
                                 </a>
                                 </h4>
@@ -210,13 +236,13 @@
                                     <img src="images/portfolio/item-3.jpg" class="img-responsive" alt="" >
                                     <div class="overlay">
                                         <div class="buttons">
-                                          <a target="_blank" href="quiz.html">Details</a>
+                                         
                                         </div>
                                     </div>
                                 </div>
                               <figcaption>
                                 <h4>
-                                <a href="quiz.html">
+                                <a href="events.html">
                                     QUIZ
                                 </a>
                                 </h4>
@@ -299,7 +325,7 @@
                             <div class="block">
                                 <h2 class="title wow fadeInDown" data-wow-delay=".3s"   data-wow-duration="500ms">HOW TO JOIN? ?</h1>
                                 <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">We heartily welcome to our student branch and we wish to bring technologies for people by merging together as one. We would also love to address your queries and suggestion, click down the button to contact us.</p>
-                                <a href="contact.php" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact Us</a>
+                                <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact Us</a>
                             </div>
                         </div>
 
