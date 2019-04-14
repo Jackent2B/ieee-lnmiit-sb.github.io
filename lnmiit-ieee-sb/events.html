@@ -33,6 +33,8 @@
         <link rel="stylesheet" href="css/main.css">
         <!-- responsive css -->
         <link rel="stylesheet" href="css/responsive.css">
+        <!-- font awesome -->
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
         <!-- Template Javascript Files
         ================================================== -->
@@ -52,6 +54,12 @@
         <script src="js/jquery.fancybox.js"></script>
         <!-- template main js -->
         <script src="js/main.js"></script>
+        <!-- jQuery CDN -->
+        <script
+                src="https://code.jquery.com/jquery-3.4.0.min.js"
+                integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+                crossorigin="anonymous">
+        </script>
     </head>
     <body>
         <!--
@@ -89,7 +97,7 @@
                             <li><a href="events.html">Events</a></li>
                             <li><a href="team.html">Team</a></li>
                             <li><a href="projects.html">Projects</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a class="scroll-link" href="#call-to-action">Contact</a></li>
 
                         </ul>
                     </div>
@@ -171,18 +179,18 @@
                     <p style="text-align:justify;" class="subtitle-des wow fadeInUp animated" data-wow-delay=".5s" data-wow-duration="500ms">
                         Following are the events that we organised in our college:
                     </p>
-                
-                    <section class="global-page-header">
-                     <div class="container">
-                          <div class="row">
-                              <div class="col-md-12">
-                                   <div class="block">
-                                     <h2>TALKS</h2>    
-                                  </div>
-                              </div>
-                         </div>
-                     </div>
-                    </section><!--/#Page header-->
+                        
+                 <section class="global-page-header" id="talks">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="block">
+                                    <h2>Talks</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section><!--/#Page header-->
             <section class="single-post">
                 <div class="container">
                     <div class="row">
@@ -227,81 +235,10 @@
                   </div>
                 </div>
               </section>
-                    
-
-
-                <section class="global-page-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="block">
-                            <h2>NWCVIP</h2>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </section><!--/#Page header-->
-            <section class="single-post">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="post-img">
-                                <img class="img-responsive" alt="" src="images/blog/nwcvip.jpg">
-                            </div>
-                            <div class="post-content">
-                              <h3>National Workshop on Computer Vision and Image Processing (NWCVIP)</h3>
-                              <p style="text-align:justify;">Digital Image Processing is used in almost every area of today's world. The aim of the workshop is to motivate students and make awareness among the faculty members to learn the latest advancement of the subject, and thus utilize this knowledge in their projects to carve out incredible things. This will be a platform for the students to grab knowledge in the field of Digital Image Processing, Video Analytics, Computer vision, Pattern recogntion, Image and Video Compression and its applications. The workshop not only focuses of knowing in depth the field but also believe that the students to learn the basics and fundamentals of digital image processing. This would provide an extensive opportunity to the participants for knowledge sharing and exhibition of theoritical and technological development in the prominent areas of digital image processing.</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
 
 
 
-                 <section class="global-page-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="block">
-                            <h2>TECHNICAL QUIZ</h2>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </section><!--/#Page header-->
-            <section class="single-post">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="post-img">
-                                <img class="img-responsive" alt="" src="images/blog/post-2.jpg">
-                            </div>
-                            <div class="post-content">
-                              <h3>LNMIIT IEEE Student Branch along with Quiz Club organised a technical quiz...</h3>
-                              <p style="text-align:justify;">LNMIIT IEEE Student Branch organised the Technical Quiz in collaboration with The Quiz Club on 20th September 2014. There was a huge participation from students of all years, ready to test their knowledge of the technical world.
-
-                              The Quiz was structured to contain 2 rounds. First Round was the question answer round containing 25 questions. Each question was displayed on the screen for 15 seconds. Second round was the tie breaker round, in case of any ties.</p>
-                              <hr>
-                              <h3>So in conclusion ...</h3>
-                              <p style="text-align:justify;">The results at the end of the first round were distinct, hence the second round was not required. The winning team along with the first and second runners up teams were announced and awarded with prizes.</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-
-
-                <section class="global-page-header">
+               <section class="global-page-header" id="workshops">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -370,7 +307,78 @@
               </section>
 
 
-              <section class="global-page-header">
+
+
+                               <section class="global-page-header" id="quiz">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="block">
+                            <h2>TECHNICAL QUIZ</h2>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section><!--/#Page header-->
+            <section class="single-post">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="post-img">
+                                <img class="img-responsive" alt="" src="images/blog/post-2.jpg">
+                            </div>
+                            <div class="post-content">
+                              <h3>LNMIIT IEEE Student Branch along with Quiz Club organised a technical quiz...</h3>
+                              <p style="text-align:justify;">LNMIIT IEEE Student Branch organised the Technical Quiz in collaboration with The Quiz Club on 20th September 2014. There was a huge participation from students of all years, ready to test their knowledge of the technical world.
+
+                              The Quiz was structured to contain 2 rounds. First Round was the question answer round containing 25 questions. Each question was displayed on the screen for 15 seconds. Second round was the tie breaker round, in case of any ties.</p>
+                              <hr>
+                              <h3>So in conclusion ...</h3>
+                              <p style="text-align:justify;">The results at the end of the first round were distinct, hence the second round was not required. The winning team along with the first and second runners up teams were announced and awarded with prizes.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+                    
+
+
+                <section class="global-page-header" id="nwcvip" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="block">
+                            <h2>NWCVIP</h2>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section><!--/#Page header-->
+            <section class="single-post">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="post-img">
+                                <img class="img-responsive" alt="" src="images/blog/nwcvip.jpg">
+                            </div>
+                            <div class="post-content">
+                              <h3>National Workshop on Computer Vision and Image Processing (NWCVIP)</h3>
+                              <p style="text-align:justify;">Digital Image Processing is used in almost every area of today's world. The aim of the workshop is to motivate students and make awareness among the faculty members to learn the latest advancement of the subject, and thus utilize this knowledge in their projects to carve out incredible things. This will be a platform for the students to grab knowledge in the field of Digital Image Processing, Video Analytics, Computer vision, Pattern recogntion, Image and Video Compression and its applications. The workshop not only focuses of knowing in depth the field but also believe that the students to learn the basics and fundamentals of digital image processing. This would provide an extensive opportunity to the participants for knowledge sharing and exhibition of theoritical and technological development in the prominent areas of digital image processing.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="global-page-header" id="others">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -453,7 +461,7 @@
                         <div class="block">
                             <h2 class="title wow fadeInDown" data-wow-delay=".3s"   data-wow-duration="500ms">HOW TO JOIN? ?</h1>
                             <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">We heartily welcome to our student branch and we wish to bring technologies for people by merging together as one. We would also love to address your queries and suggestion, click down the button to contact us.</p>
-                            <a href="contact.php" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact Us</a>
+                            <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact Us</a>
                         </div>
                     </div>
 
@@ -468,5 +476,74 @@
           <div class="container">
           </div>
         </footer> <!-- /#footer -->
+        <a id="navb" href="#top-bar"></a>
+        <style type="text/css">
+                html   {
+                          scroll-behavior: smooth;
+                       }
+                #navb {
+                          display: none;
+                          background-color: #333;
+                          width: 50px;
+                          height: 50px;
+                          text-align: center;
+                          border-radius: 4px;
+                          margin: 30px;
+                          position: fixed;
+                          bottom: 30px;
+                          right: 30px;
+                          transition: background-color .3s,opacity .5s, visibility .5s;
+                          z-index: 1000;
+                          opacity: 50;
+                          
+                        }
+                #navb:hover 
+                        {
+                          cursor: pointer;
+                          background-color: #696969;
+                        }
+                #navb:active 
+                        {
+                          background-color: #555;
+                        }
+                #navb::after 
+                        {
+                        content: "\f077";
+                        font-family: FontAwesome;
+                        font-weight: normal;
+                        font-style: normal;
+                        font-size: 2em;
+                        line-height: 50px;
+                        color: #fff;
+                        }
+
+        </style>
+        <script>
+
+           jQuery(document).ready(function() {
+              
+              var btn = $('#navb');
+
+              $(window).scroll(function()
+               {
+                 if ($(window).scrollTop() > 300)
+                 {
+                  btn.fadeIn();
+                 } 
+                 else
+                 {
+                  btn.fadeOut();
+                 }
+              });
+
+              btn.on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop:0}, '300');
+                return false;
+              });
+
+            });
+
+        </script>
   </body>
 </html>
