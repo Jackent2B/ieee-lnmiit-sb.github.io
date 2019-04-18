@@ -52,6 +52,45 @@
         <script src="js/jquery.fancybox.js"></script>
         <!-- template main js -->
         <script src="js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+
+			// Make sure this.hash has a value before overriding default behavior
+			if (this.hash !== "") {
+			  // Prevent default anchor click behavior
+			  event.preventDefault();
+
+			  // Store hash
+			  var hash = this.hash;
+
+			  // Using jQuery's animate() method to add smooth page scroll
+			  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+			  $('html, body').animate({
+				scrollTop: $(hash).offset().top
+			  }, 800, function(){
+
+				// Add hash (#) to URL when done scrolling (default click behavior)
+				window.location.hash = hash;
+			  });
+			} // End if
+		  });
+		});
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript">var scrolltotop={setting:{startline:100,scrollto:0,scrollduration:1e3,fadeduration:[500,100]},controlHTML:'<img src="https://i1155.photobucket.com/albums/p559/scrolltotop/arrow200.png" />',controlattrs:{offsetx:5,offsety:5},anchorkeyword:"#top",state:{isvisible:!1,shouldvisible:!1},scrollup:function(){this.cssfixedsupport||this.$control.css({opacity:0});var t=isNaN(this.setting.scrollto)?this.setting.scrollto:parseInt(this.setting.scrollto);t="string"==typeof t&&1==jQuery("#"+t).length?jQuery("#"+t).offset().top:0,this.$body.animate({scrollTop:t},this.setting.scrollduration)},keepfixed:function(){var t=jQuery(window),o=t.scrollLeft()+t.width()-this.$control.width()-this.controlattrs.offsetx,s=t.scrollTop()+t.height()-this.$control.height()-this.controlattrs.offsety;this.$control.css({left:o+"px",top:s+"px"})},togglecontrol:function(){var t=jQuery(window).scrollTop();this.cssfixedsupport||this.keepfixed(),this.state.shouldvisible=t>=this.setting.startline?!0:!1,this.state.shouldvisible&&!this.state.isvisible?(this.$control.stop().animate({opacity:1},this.setting.fadeduration[0]),this.state.isvisible=!0):0==this.state.shouldvisible&&this.state.isvisible&&(this.$control.stop().animate({opacity:0},this.setting.fadeduration[1]),this.state.isvisible=!1)},init:function(){jQuery(document).ready(function(t){var o=scrolltotop,s=document.all;o.cssfixedsupport=!s||s&&"CSS1Compat"==document.compatMode&&window.XMLHttpRequest,o.$body=t(window.opera?"CSS1Compat"==document.compatMode?"html":"body":"html,body"),o.$control=t('<div id="topcontrol">'+o.controlHTML+"</div>").css({position:o.cssfixedsupport?"fixed":"absolute",bottom:o.controlattrs.offsety,right:o.controlattrs.offsetx,opacity:0,cursor:"pointer"}).attr({title:"Scroll to Top"}).click(function(){return o.scrollup(),!1}).appendTo("body"),document.all&&!window.XMLHttpRequest&&""!=o.$control.text()&&o.$control.css({width:o.$control.width()}),o.togglecontrol(),t('a[href="'+o.anchorkeyword+'"]').click(function(){return o.scrollup(),!1}),t(window).bind("scroll resize",function(t){o.togglecontrol()})})}};scrolltotop.init();
+		jQuery(document).ready(function($){ 
+		if (localStorage.getItem('advertOnce') !== 'true') {
+		$('body').append('<div id="advert-once" style="position:fixed; bottom: 10px; left: 10px;"><a href="https://www.scrolltotop.com/guide-on-how-to-make-a-website.php" target="_blank" rel="nofollow"><img src="https://i1155.photobucket.com/albums/p559/scrolltotop/makewebsite.png" width="87" height="52" border="0" alt="make a website" /></a><div class="advert-button"></div></div>')
+		localStorage.setItem('advertOnce','true');
+		} 
+		$('#advert-once .advert-button').on('click',function(){
+		$('#advert-once').hide();
+		}); 
+		});
+		</script>
     </head>
     <body>
         <!--
@@ -88,8 +127,9 @@
                         </li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="events.html">Events</a></li>
+                        <li><a href="projects.html">Projects</a></li>
                         <li><a href="team.html">Team</a></li>
-                        <li><a href="contact.php">Contact</a></li>
+                        <li><a class="scroll-link" href="#footer">Contact</a></li>
                       </ul>
                   </div>
                 </nav>
@@ -137,130 +177,133 @@
                     <div class="col-md-4">
                         <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
                             <div class="team-img">
-                                <img src="images/team/vish.jpg" class="img-circle img-responsive" alt="">
+                                <img src="images/team/1.jpg" class="img-circle img-responsive" alt="">
                             </div>
-                            <h3 class="team_name">Vishwajeet Narwal</h3>
-                            <p class="team_designation">Chairman</p>
-                            <p class="team_text">Tony Stark is Fictional. I am the real Iron Man !</p>
+                            <h3 class="team_name">Yash Agrawal</h3>
+                            <p class="team_designation">Branch Secretary <br>yash.agr5980@gmail.com</br></p>
+                            <p class="team_text">Website Design & Management.</p>
                             <p class="social-icons">
-                              <a href="http://community.wvu.edu/~vn0007/" target="_blank"><i class="ion-android-globe"></i></a>
-                              <a href="https://github.com/macbull" target="_blank"><i class="ion-social-github"></i></a>
-                              <a href="https://twitter.com/vishNatic" target="_blank"><i class="ion-social-twitter"></i></a>
-                              <a href="https://www.linkedin.com/in/vishwajeet-narwal-1a978778" target="_blank"><i class="ion-social-linkedin"></i></a>
+                           		<a href="https://github.com/macbull" target="_blank"><i class="ion-social-github"></i></a>
+                              	<a href="https://www.linkedin.com/in/yashagrawal5980/" target="_blank"><i class="ion-social-linkedin"></i></a>
                             </p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
                             <div class="team-img">
-                                <img src="images/team/ishita.png" class="img-circle" alt="">
+                                <img src="images/team/2.jpg" class="img-circle" alt="">
                             </div>
-                            <h3 class="team_name">Ishita Parakh</h3>
-                            <p class="team_designation">Chairperson, WIE</p>
-                            <p class="team_text">A technical enthusiast, a music aficionado and a people person; I believe in holistic development and that is what you will find me working towards.  </p>
+                            <h3 class="team_name">Rishabh Jain</h3>
+                            <p class="team_designation">Vice Chairperson <br>rjrishabh2409@gmail.com</br></p>
+                            <p class="team_text">Embedded Systems, IoT & Robotics.</p>
                             <p class="social-icons">
                               <a href="https://github.com/IshitaParakh" target="_blank"><i class="ion-social-github"></i></a>
-                              <a href="https://twitter.com/Ishita_Parakh" target="_blank"><i class="ion-social-twitter"></i></a>
-                              <a href="https://www.linkedin.com/in/ishita-parakh" target="_blank"><i class="ion-social-linkedin"></i></a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
-                            <div class="team-img">
-                                <img src="images/team/vikas.jpg" class="img-circle" alt="">
-                            </div>
-                            <h3 class="team_name">Vikas Aggarwal</h3>
-                            <p class="team_designation">Treasurer</p>
-                            <p class="team_text">I am much passionate and interested in new emerging technologies. I am much interested in data analytics  and have a good knowledge of R and python programming language.</p>
-                            <p class="social-icons">
-                              <a href="https://www.facebook.com/vikas.agarwal.507?fref=ts" class="facebook" target="_blank"><i class="ion-social-facebook"></i></a>
-                              <a href="https://twitter.com/vikaslnmiit" target="_blank"><i class="ion-social-twitter"></i></a>
-                            </p>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-4">
-                        <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
-                            <div class="team-img">
-                                <img src="images/team/team-1.jpg" class="img-circle" alt="">
-                            </div>
-                            <h3 class="team_name">Shaurya Shubham</h3>
-                            <p class="team_designation">Secretary</p>
-                            <p class="team_text">Majoring in Electronics and Communication, a Pre-final year student, a machine learning enthusiast.</p>
-                            <p class="social-icons">
-                                <a href="https://www.facebook.com/shaurya.shubham.923?fref=ts" class="facebook" target="_blank"><i class="ion-social-facebook"></i></a>
-                                <a href="https://github.com/shaurya27" target="_blank"><i class="ion-social-github"></i></a>
-                                <a href="https://twitter.com/shaurya_shubham" target="_blank"><i class="ion-social-twitter"></i></a>
-                                <a href="https://www.linkedin.com/in/shauryashubham" target="_blank"><i class="ion-social-linkedin"></i></a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
-                            <div class="team-img">
-                                <img src="images/team/avina.jpg" class="img-circle" alt="">
-                            </div>
-                            <h3 class="team_name">Avina Jain</h3>
-                            <p class="team_designation">Vice Chairperson, WIE</p>
-                            <p class="team_text">3rd year student , Branch - ECE</p>
-                            <p class="social-icons">
-                              <a href="https://github.com/Avina-Jain" target="_blank"><i class="ion-social-github"></i></a>
-                              <a href="https://twitter.com/avinajain" target="_blank"><i class="ion-social-twitter"></i></a>
-                              <a href="www.linkedin.com/in/avina-jain" target="_blank"><i class="ion-social-linkedin"></i></a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
-                            <div class="team-img">
-                                <img src="images/team/pooja.jpg" class="img-circle" alt="">
-                            </div>
-                            <h3 class="team_name">Pooja Biyani</h3>
-                            <p class="team_designation">Secretary, WIE</p>
-                            <p class="team_text">Enthusiastic about taking up new challenges, ambitious. I like finding patterns in data and like to know what the data offers. I want to become a data scientist. </p>
-                            <p class="social-icons">
-                              <a href="https://in.linkedin.com/in/pooja-biyani-4895a8a7" target="_blank"><i class="ion-social-linkedin"></i></a>
-
-                            </p>
-                        </div>
-                    </div>
-
-
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-4">
-                        <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
-                            <div class="team-img">
-                                <img src="images/team/team-2.jpg" class="img-circle" alt="">
-                            </div>
-                            <h3 class="team_name">Nitin Prakash</h3>
-                            <p class="team_designation">Web Developer</p>
-                            <p class="team_text">Majoring in Computer Science and Engineering,a 2nd year student and a Full Stack web developer. Also I prefer my puns intended.</p>
-                            <p class="social-icons">
-                                <a href="https://facebook.com/AvengedEndie" class="facebook" target="_blank"><i class="ion-social-facebook"></i></a>
-                                <a href="https://twitter.com/Nitin63Nitin" target="_blank"><i class="ion-social-twitter"></i></a>
-                                <a href="https://github.com/nitinprakash96" target="_blank"><i class="ion-social-github"></i></a>
-                                <a href="https://www.linkedin.com/in/nitin-prakash-93579210b?trk=nav_responsive_tab_profile" target="_blank"><i class="ion-social-linkedin"></i></a>
+                              <a href="https://www.linkedin.com/in/rishabh-jain2409/" target="_blank"><i class="ion-social-linkedin"></i></a>
                             </p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
                             <div class="team-img">
-                                <img src="images/team/vivek.jpg" class="img-circle" alt="">
+                                <img src="images/team/9.jpg" class="img-circle" alt="">
                             </div>
-                            <h3 class="team_name">Vivek K. Tiwari</h3>
-                            <p class="team_designation">Content Creator</p>
-                            <p class="team_text"> I like to explore new technologies. Blogger, Poet, Photographer, Movie-Freak, Traveller.</p>
+                            <h3 class="team_name">Pankhuri Vanjani</h3>
+                            <p class="team_designation">Chairperson <br>16uec069@lnmiit.ac.in</br></p>
+                            <p class="team_text">IoT, Computer Vision & Robotics.</p>
                             <p class="social-icons">
-                                <a href="https://www.facebook.com/kr.vivek.ab?__mref=message_bubble" class="facebook" target="_blank"><i class="ion-social-facebook"></i></a>
-                                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2Fiamvivekktiwari&h=0AQHTJ2am" target="_blank"><i class="ion-social-twitter"></i></a>
-                                <a href=" https://in.linkedin.com/in/vivek-kumar-227704106" target="_blank"><i class="ion-social-linkedin"></i></a>
+                              <a href="https://github.com/IshitaParakh" target="_blank"><i class="ion-social-github"></i></a>
+                              <a href="https://www.linkedin.com/in/pankhuri-vanjani-767283101/" target="_blank"><i class="ion-social-linkedin"></i></a>
+                            </p>
+                        </div>
+                    </div>
+				</div>
+                  
+                  <div class="row">
+                  <div class="col-md-4">
+                        <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
+                            <div class="team-img">
+                                <img src="images/team/3.jpg" class="img-circle" alt="">
+                            </div>
+                            <h3 class="team_name">Nischal Goyal</h3>
+                            <p class="team_designation">Treasurer <br>17ucs101@lnmiit.ac.in</br></p>
+                            <p class="team_text">Data Structures & Algorithms Analysis.</p>
+                            <p class="social-icons">
+                              <a href="https://github.com/IshitaParakh" target="_blank"><i class="ion-social-github"></i></a>
+                              <a href="https://www.linkedin.com/in/nischal-goyal-620270146/" target="_blank"><i class="ion-social-linkedin"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
+                            <div class="team-img">
+                                <img src="images/team/4.jpg" class="img-circle" alt="">
+                            </div>
+                            <h3 class="team_name">Dhruv Gupta</h3>
+                            <p class="team_designation">Core Member <br>17uec044@lnmiit.ac.in</br></p>
+                            <p class="team_text">Web Development & Programming.</p>
+                            <p class="social-icons">
+                                <a href="https://github.com/IshitaParakh" target="_blank"><i class="ion-social-github"></i></a>
+                              <a href="https://www.linkedin.com/in/dhruvgupta14/" target="_blank"><i class="ion-social-linkedin"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
+                            <div class="team-img">
+                                <img src="images/team/5.jpg" class="img-circle" alt="">
+                            </div>
+                            <h3 class="team_name">Pranjal Jain</h3>
+                            <p class="team_designation">Core Member <br>16uec072@lnmiit.ac.in</br></p>
+                            <p class="team_text">Internet of Things, Robotics, Machine Learning, & Computer Vision.</p>
+                            <p class="social-icons">
+                              <a href="https://github.com/IshitaParakh" target="_blank"><i class="ion-social-github"></i></a>
+                              <a href="https://www.linkedin.com/in/iam-pranjal-jain/" target="_blank"><i class="ion-social-linkedin"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                  <div class="row">
+                    <div class="col-md-4">
+                        <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
+                            <div class="team-img">
+                                <img src="images/team/7.jpg" class="img-circle" alt="">
+                            </div>
+                            <h3 class="team_name">Arushi Maheshwari</h3>
+                            <p class="team_designation">Core Member <br>arushimah@gmail.com</br></p>
+                            <p class="team_text">Machine Learning. </p>
+                            <p class="social-icons">
+                              <a href="https://github.com/IshitaParakh" target="_blank"><i class="ion-social-github"></i></a>
+                              <a href="https://www.linkedin.com/in/arushi-maheshwari-781283152/" target="_blank"><i class="ion-social-linkedin"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
+                            <div class="team-img">
+                                <img src="images/team/8.jpg" class="img-circle" alt="">
+                            </div>
+                            <h3 class="team_name">Srivardhan</h3>
+                            <p class="team_designation">Core Member <br>17uec058@lnmiit.ac.in</br></p>
+                            <p class="team_text">Management. </p>
+                            <p class="social-icons">
+                              <a href="https://github.com/IshitaParakh" target="_blank"><i class="ion-social-github"></i></a>
+                              <a href="https://www.linkedin.com/in/jaladi-srivardhan-b138b5183/" target="_blank"><i class="ion-social-linkedin"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
+                            <div class="team-img">
+                                <img src="images/team/6.jpg" class="img-circle" alt="">
+                            </div>
+                            <h3 class="team_name">Aditya Sharma</h3>
+                            <p class="team_designation">Core Member <br>17ucc007@lnmiit.ac.in</br></p>
+                            <p class="team_text">Coding - Data Science. </p>
+                            <p class="social-icons">
+                              <a href="https://github.com/IshitaParakh" target="_blank"><i class="ion-social-github"></i></a>
+                              <a href="https://www.linkedin.com/in/aditya-sharma-68422014b/" target="_blank"><i class="ion-social-linkedin"></i></a>
+
                             </p>
                         </div>
                     </div>
@@ -281,7 +324,7 @@
                         <div class="block">
                             <h2 class="title wow fadeInDown" data-wow-delay=".3s"   data-wow-duration="500ms">HOW TO JOIN? ?</h1>
                             <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">We heartily welcome to our student branch and we wish to bring technologies for people by merging together as one. We would also love to address your queries and suggestion, click down the button to contact us.</p>
-                            <a href="contact.php" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact Us</a>
+                            <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact Us</a>
                         </div>
                     </div>
 
@@ -302,24 +345,24 @@
               <!-- Social Media -->
               <ul class="social">
                 <li>
-                  <a href="https://facebook.com/AvengedEndie" class="Facebook">
-                    <i class="ion-social-facebook"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/Nitin63Nitin" class="Twitter">
-                    <i class="ion-social-twitter"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/nitin-prakash-93579210b?trk=nav_responsive_tab_profile" class="Linkedin">
-                    <i class="ion-social-linkedin"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/nitinprakash96">
-                    <i class="ion-social-github"></i>
-                  </a>
+                  <a href="https://www.facebook.com/IEEE.LNMIIT/" class="Facebook">
+                        <i class="ion-social-facebook"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/LNMIIT_Jaipur" class="Twitter">
+                        <i class="ion-social-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.linkedin.com/company/ieee-sb-lnmiit/" class="Linkedin">
+                        <i class="ion-social-linkedin"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/IEEE-LNMIIT-SB">
+                        <i class="ion-social-github"></i>
+                      </a>
                 </li>
               </ul>
             </div>

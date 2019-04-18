@@ -534,10 +534,40 @@ ul.social-icons li {
   height: 36px;
 }
 
+.global-page-headerr {
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 90px 0 25px 0;
+  position: relative;
+  background: #02bdd5;
+  color: #fff;
+}
+.global-page-headerr h2 {
+  font-size: 42px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+.global-page-headerr .breadcrumb {
+  background: none;
+  font-size: 16px;
+  padding: 8px  0;
+}
+.global-page-headerr .breadcrumb .active {
+  color: #fff;
+}
+.global-page-headerr .breadcrumb li a {
+  color: #fff;
+}
+.global-page-headerr .block {
+  position: relative;
+  z-index: 99;
+  text-align: center;
+}
 .global-page-header {
   background-attachment: fixed;
   background-size: cover;
-  padding: 120px 0 25px 0;
+  padding: 30px 0 25px 0;
   position: relative;
   background: #02bdd5;
   color: #fff;
@@ -1077,4 +1107,11 @@ article {
   padding: 8px 0;
   color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

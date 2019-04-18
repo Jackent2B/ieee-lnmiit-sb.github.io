@@ -52,6 +52,45 @@
         <script src="js/jquery.fancybox.js"></script>
         <!-- template main js -->
         <script src="js/main.js"></script>
+       	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+
+			// Make sure this.hash has a value before overriding default behavior
+			if (this.hash !== "") {
+			  // Prevent default anchor click behavior
+			  event.preventDefault();
+
+			  // Store hash
+			  var hash = this.hash;
+
+			  // Using jQuery's animate() method to add smooth page scroll
+			  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+			  $('html, body').animate({
+				scrollTop: $(hash).offset().top
+			  }, 800, function(){
+
+				// Add hash (#) to URL when done scrolling (default click behavior)
+				window.location.hash = hash;
+			  });
+			} // End if
+		  });
+		});
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript">var scrolltotop={setting:{startline:100,scrollto:0,scrollduration:1e3,fadeduration:[500,100]},controlHTML:'<img src="https://i1155.photobucket.com/albums/p559/scrolltotop/arrow200.png" />',controlattrs:{offsetx:5,offsety:5},anchorkeyword:"#top",state:{isvisible:!1,shouldvisible:!1},scrollup:function(){this.cssfixedsupport||this.$control.css({opacity:0});var t=isNaN(this.setting.scrollto)?this.setting.scrollto:parseInt(this.setting.scrollto);t="string"==typeof t&&1==jQuery("#"+t).length?jQuery("#"+t).offset().top:0,this.$body.animate({scrollTop:t},this.setting.scrollduration)},keepfixed:function(){var t=jQuery(window),o=t.scrollLeft()+t.width()-this.$control.width()-this.controlattrs.offsetx,s=t.scrollTop()+t.height()-this.$control.height()-this.controlattrs.offsety;this.$control.css({left:o+"px",top:s+"px"})},togglecontrol:function(){var t=jQuery(window).scrollTop();this.cssfixedsupport||this.keepfixed(),this.state.shouldvisible=t>=this.setting.startline?!0:!1,this.state.shouldvisible&&!this.state.isvisible?(this.$control.stop().animate({opacity:1},this.setting.fadeduration[0]),this.state.isvisible=!0):0==this.state.shouldvisible&&this.state.isvisible&&(this.$control.stop().animate({opacity:0},this.setting.fadeduration[1]),this.state.isvisible=!1)},init:function(){jQuery(document).ready(function(t){var o=scrolltotop,s=document.all;o.cssfixedsupport=!s||s&&"CSS1Compat"==document.compatMode&&window.XMLHttpRequest,o.$body=t(window.opera?"CSS1Compat"==document.compatMode?"html":"body":"html,body"),o.$control=t('<div id="topcontrol">'+o.controlHTML+"</div>").css({position:o.cssfixedsupport?"fixed":"absolute",bottom:o.controlattrs.offsety,right:o.controlattrs.offsetx,opacity:0,cursor:"pointer"}).attr({title:"Scroll to Top"}).click(function(){return o.scrollup(),!1}).appendTo("body"),document.all&&!window.XMLHttpRequest&&""!=o.$control.text()&&o.$control.css({width:o.$control.width()}),o.togglecontrol(),t('a[href="'+o.anchorkeyword+'"]').click(function(){return o.scrollup(),!1}),t(window).bind("scroll resize",function(t){o.togglecontrol()})})}};scrolltotop.init();
+		jQuery(document).ready(function($){ 
+		if (localStorage.getItem('advertOnce') !== 'true') {
+		$('body').append('<div id="advert-once" style="position:fixed; bottom: 10px; left: 10px;"><a href="https://www.scrolltotop.com/guide-on-how-to-make-a-website.php" target="_blank" rel="nofollow"><img src="https://i1155.photobucket.com/albums/p559/scrolltotop/makewebsite.png" width="87" height="52" border="0" alt="make a website" /></a><div class="advert-button"></div></div>')
+		localStorage.setItem('advertOnce','true');
+		} 
+		$('#advert-once .advert-button').on('click',function(){
+		$('#advert-once').hide();
+		}); 
+		});
+		</script>
     </head>
     <body>
         <!--
@@ -87,9 +126,9 @@
                             </li>
                             <li><a href="about.html">About</a></li>
                             <li><a href="events.html">Events</a></li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="contact.php">Contact</a></li>
-
+                            <li><a href="projects.html">Projects</a></li>
+							<li><a href="team.html">Team</a></li>
+                            <li><a class="scroll-link" href="#footer">Contact</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -147,7 +186,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="block wow fadeInRight" data-wow-delay=".3s" data-wow-duration="500ms">
-                                <img src="images/about/about.jpg" alt="">
+                                <img src="images/about/about.jpg" alt="" align="right" height="300" width="300">
                             </div>
                         </div>
                     </div>
@@ -172,13 +211,13 @@
                                     <img src="images/portfolio/item-1.jpg" class="img-responsive" alt="this is a title" >
                                     <div class="overlay">
                                         <div class="buttons">
-                                          <a target="_blank" href="talks.html">Details</a>
+                                          
                                         </div>
                                     </div>
                                 </div>
                               <figcaption>
                                 <h4>
-                                <a href="talks.html">
+                                <a href="events.html">
                                   TALKS
                                 </a>
                                 </h4>
@@ -191,13 +230,13 @@
                                     <img src="images/portfolio/item-2.jpg" class="img-responsive" alt="this is a title" >
                                     <div class="overlay">
                                         <div class="buttons">
-                                          <a target="_blank" href="workshops.html">Details</a>
+                                         
                                         </div>
                                     </div>
                                 </div>
                               <figcaption>
                                 <h4>
-                                <a href="workshops.html">
+                                <a href="events.html">
                                   WORKSHOPS
                                 </a>
                                 </h4>
@@ -210,13 +249,13 @@
                                     <img src="images/portfolio/item-3.jpg" class="img-responsive" alt="" >
                                     <div class="overlay">
                                         <div class="buttons">
-                                          <a target="_blank" href="quiz.html">Details</a>
+                                         
                                         </div>
                                     </div>
                                 </div>
                               <figcaption>
                                 <h4>
-                                <a href="quiz.html">
+                                <a href="events.html">
                                     QUIZ
                                 </a>
                                 </h4>
@@ -299,7 +338,7 @@
                             <div class="block">
                                 <h2 class="title wow fadeInDown" data-wow-delay=".3s"   data-wow-duration="500ms">HOW TO JOIN? ?</h1>
                                 <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">We heartily welcome to our student branch and we wish to bring technologies for people by merging together as one. We would also love to address your queries and suggestion, click down the button to contact us.</p>
-                                <a href="contact.php" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact Us</a>
+                                <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact Us</a>
                             </div>
                         </div>
 
@@ -319,22 +358,22 @@
                   <!-- Social Media -->
                   <ul class="social">
                     <li>
-                      <a href="https://facebook.com/AvengedEndie" class="Facebook">
+                      <a href="https://www.facebook.com/IEEE.LNMIIT/" class="Facebook">
                         <i class="ion-social-facebook"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://twitter.com/Nitin63Nitin" class="Twitter">
+                      <a href="https://twitter.com/LNMIIT_Jaipur" class="Twitter">
                         <i class="ion-social-twitter"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.linkedin.com/in/nitin-prakash-93579210b?trk=nav_responsive_tab_profile" class="Linkedin">
+                      <a href="https://www.linkedin.com/company/ieee-sb-lnmiit/" class="Linkedin">
                         <i class="ion-social-linkedin"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://github.com/nitinprakash96">
+                      <a href="https://github.com/IEEE-LNMIIT-SB">
                         <i class="ion-social-github"></i>
                       </a>
                     </li>
