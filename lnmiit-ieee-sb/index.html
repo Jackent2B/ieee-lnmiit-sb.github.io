@@ -33,11 +33,14 @@
         <link rel="stylesheet" href="css/main.css">
         <!-- responsive css -->
         <link rel="stylesheet" href="css/responsive.css">
+<<<<<<< HEAD
         <!-- font-awesome -->
         <link rel="stylesheet" href="assets/css/font-awesome.min.css">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <!-- symentic ui -->
         <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+=======
+>>>>>>> new/master
 
         <!-- Template Javascript Files
         ================================================== -->
@@ -57,11 +60,53 @@
         <script src="js/jquery.fancybox.js"></script>
         <!-- template main js -->
         <script src="js/main.js"></script>
+<<<<<<< HEAD
         <script
                 src="https://code.jquery.com/jquery-3.4.0.min.js"
                 integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
                 crossorigin="anonymous">
         </script>
+=======
+       	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links
+		  $("a").on('click', function(event) {
+
+			// Make sure this.hash has a value before overriding default behavior
+			if (this.hash !== "") {
+			  // Prevent default anchor click behavior
+			  event.preventDefault();
+
+			  // Store hash
+			  var hash = this.hash;
+
+			  // Using jQuery's animate() method to add smooth page scroll
+			  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+			  $('html, body').animate({
+				scrollTop: $(hash).offset().top
+			  }, 800, function(){
+
+				// Add hash (#) to URL when done scrolling (default click behavior)
+				window.location.hash = hash;
+			  });
+			} // End if
+		  });
+		});
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript">var scrolltotop={setting:{startline:100,scrollto:0,scrollduration:1e3,fadeduration:[500,100]},controlHTML:'<img src="https://i1155.photobucket.com/albums/p559/scrolltotop/arrow200.png" />',controlattrs:{offsetx:5,offsety:5},anchorkeyword:"#top",state:{isvisible:!1,shouldvisible:!1},scrollup:function(){this.cssfixedsupport||this.$control.css({opacity:0});var t=isNaN(this.setting.scrollto)?this.setting.scrollto:parseInt(this.setting.scrollto);t="string"==typeof t&&1==jQuery("#"+t).length?jQuery("#"+t).offset().top:0,this.$body.animate({scrollTop:t},this.setting.scrollduration)},keepfixed:function(){var t=jQuery(window),o=t.scrollLeft()+t.width()-this.$control.width()-this.controlattrs.offsetx,s=t.scrollTop()+t.height()-this.$control.height()-this.controlattrs.offsety;this.$control.css({left:o+"px",top:s+"px"})},togglecontrol:function(){var t=jQuery(window).scrollTop();this.cssfixedsupport||this.keepfixed(),this.state.shouldvisible=t>=this.setting.startline?!0:!1,this.state.shouldvisible&&!this.state.isvisible?(this.$control.stop().animate({opacity:1},this.setting.fadeduration[0]),this.state.isvisible=!0):0==this.state.shouldvisible&&this.state.isvisible&&(this.$control.stop().animate({opacity:0},this.setting.fadeduration[1]),this.state.isvisible=!1)},init:function(){jQuery(document).ready(function(t){var o=scrolltotop,s=document.all;o.cssfixedsupport=!s||s&&"CSS1Compat"==document.compatMode&&window.XMLHttpRequest,o.$body=t(window.opera?"CSS1Compat"==document.compatMode?"html":"body":"html,body"),o.$control=t('<div id="topcontrol">'+o.controlHTML+"</div>").css({position:o.cssfixedsupport?"fixed":"absolute",bottom:o.controlattrs.offsety,right:o.controlattrs.offsetx,opacity:0,cursor:"pointer"}).attr({title:"Scroll to Top"}).click(function(){return o.scrollup(),!1}).appendTo("body"),document.all&&!window.XMLHttpRequest&&""!=o.$control.text()&&o.$control.css({width:o.$control.width()}),o.togglecontrol(),t('a[href="'+o.anchorkeyword+'"]').click(function(){return o.scrollup(),!1}),t(window).bind("scroll resize",function(t){o.togglecontrol()})})}};scrolltotop.init();
+		jQuery(document).ready(function($){ 
+		if (localStorage.getItem('advertOnce') !== 'true') {
+		$('body').append('<div id="advert-once" style="position:fixed; bottom: 10px; left: 10px;"><a href="https://www.scrolltotop.com/guide-on-how-to-make-a-website.php" target="_blank" rel="nofollow"><img src="https://i1155.photobucket.com/albums/p559/scrolltotop/makewebsite.png" width="87" height="52" border="0" alt="make a website" /></a><div class="advert-button"></div></div>')
+		localStorage.setItem('advertOnce','true');
+		} 
+		$('#advert-once .advert-button').on('click',function(){
+		$('#advert-once').hide();
+		}); 
+		});
+		</script>
+>>>>>>> new/master
     </head>
     <body>
  
@@ -98,10 +143,16 @@
                             </li>
                             <li><a href="about.html">About</a></li>
                             <li><a href="events.html">Events</a></li>
+<<<<<<< HEAD
                             <li><a href="team.html">Team</a></li>
                             <li><a href="projects.html">Projects</a></li>
                             <li><a class="scroll-link" href="#call-to-action">Contact</a></li>
 
+=======
+                            <li><a href="projects.html">Projects</a></li>
+							<li><a href="team.html">Team</a></li>
+                            <li><a class="scroll-link" href="#footer">Contact</a></li>
+>>>>>>> new/master
                         </ul>
                     </div>
                 </nav>
@@ -127,6 +178,7 @@ body {
 </div>
         </header>
 
+<<<<<<< HEAD
         <nav class="navbar navbar-toggleable-sm bg-inverse navbar-inverse fixed-top fixed-top-2">
             <a href="http://www.ieee.org/?WT.mc_id=mn_ieee" class="navbar-brand">IEEE.org</a>
             <a href="http://ieeexplore.ieee.org/" class="navbar-brand">IEEE Xplore Digital Library</a>
@@ -138,6 +190,8 @@ body {
 
           
 
+=======
+>>>>>>> new/master
         <!--
         ==================================================
         Slider Section Start
@@ -160,7 +214,11 @@ body {
                                 <!-- /.slider -->
                                 <h2 class="wow fadeInUp animated" data-wow-delay=".6s" >
                                   We are a combined association of faculty members along with the enthusiastic students of our college, The LNMIIT Jaipur. We strive for creating technology for the people and people for technology.                                </h2>
+<<<<<<< HEAD
                                 <a class="btn btn-outline-dark" data-wow-delay=".9s" href="#works" data-section="#works" >View Works</a>
+=======
+                                <a class="btn-lines dark light wow fadeInUp animated smooth-scroll btn btn-default btn-green" data-wow-delay=".9s" href="#works" data-section="#works" >View Works</a>
+>>>>>>> new/master
 
                             </div>
                         </div>
@@ -179,16 +237,26 @@ body {
                                 <h2>
                                 ABOUT US
                                 </h2>
+<<<<<<< HEAD
                                 <p style="text-align:justify;">
                                   Institute of Electrical and Electronics Engineers is a not-for-profit organization recognised globally as IEEE formed in 1963. We at LNMIIT have our own student branch which is an amalgamation of faculty members and enthusiastic students of our college to develop technologies for people and for a better future.                                </p>
                                 <p style="text-align:justify;">
+=======
+                                <p>
+                                  Institute of Electrical and Electronics Engineers is a not-for-profit organization recognised globally as IEEE formed in 1963. We at LNMIIT have our own student branch which is an amalgamation of faculty members and enthusiastic students of our college to develop technologies for people and for a better future.                                </p>
+                                <p>
+>>>>>>> new/master
                                   IEEE's core purpose is to foster technological innovation and excellence for the benefit of humanity. The Student branch activities offer numerous educational, technical, and professional opportunities through various events, talks and workshops to enhance the skill set of students.                                </p>
                             </div>
 
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="block wow fadeInRight" data-wow-delay=".3s" data-wow-duration="500ms">
+<<<<<<< HEAD
                                 <img src="images/about/about.jpg" alt="about is">
+=======
+                                <img src="images/about/about.jpg" alt="" align="right" height="300" width="300">
+>>>>>>> new/master
                             </div>
                         </div>
                     </div>
@@ -210,12 +278,21 @@ body {
                         <div class="col-sm-4 col-xs-12">
                             <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
                                 <div class="img-wrapper">
+<<<<<<< HEAD
                                     <a href="events.html#talks"> <img src="images/portfolio/item-1.jpg" class="img-responsive" alt="this is a title" ></a>
                                     
+=======
+                                    <img src="images/portfolio/item-1.jpg" class="img-responsive" alt="this is a title" >
+                                    <div class="overlay">
+                                        <div class="buttons">
+                                          
+                                        </div>
+                                    </div>
+>>>>>>> new/master
                                 </div>
                               <figcaption>
                                 <h4>
-                                <a href="talks.html">
+                                <a href="events.html">
                                   TALKS
                                 </a>
                                 </h4>
@@ -225,12 +302,25 @@ body {
                         <div class="col-sm-4 col-xs-12">
                             <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
                                 <div class="img-wrapper">
+<<<<<<< HEAD
                                     <a href="events.html#workshops"><img src="images/portfolio/item-2.jpg" class="img-responsive" alt="this is a title" ></a>
                                     
                                 </div>
                               <figcaption>
                                 <h4>
                                 <a href="workshops.html#workshops">
+=======
+                                    <img src="images/portfolio/item-2.jpg" class="img-responsive" alt="this is a title" >
+                                    <div class="overlay">
+                                        <div class="buttons">
+                                         
+                                        </div>
+                                    </div>
+                                </div>
+                              <figcaption>
+                                <h4>
+                                <a href="events.html">
+>>>>>>> new/master
                                   WORKSHOPS
                                 </a>
                                 </h4>
@@ -240,12 +330,25 @@ body {
                         <div class="col-sm-4 col-xs-12">
                             <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="300ms">
                                 <div class="img-wrapper">
+<<<<<<< HEAD
                                   <a href="events.html#quiz"><img src="images/portfolio/item-3.jpg" class="img-responsive" alt="quiz time" ></a>
                                     
                                 </div>
                               <figcaption>
                                 <h4>
                                 <a href="quiz.html#quiz">
+=======
+                                    <img src="images/portfolio/item-3.jpg" class="img-responsive" alt="" >
+                                    <div class="overlay">
+                                        <div class="buttons">
+                                         
+                                        </div>
+                                    </div>
+                                </div>
+                              <figcaption>
+                                <h4>
+                                <a href="events.html">
+>>>>>>> new/master
                                     QUIZ
                                 </a>
                                 </h4>
@@ -379,6 +482,7 @@ body {
            ==================================================
            Footer Section Start
            ================================================== -->
+<<<<<<< HEAD
     
 
          <footer id="footer">
@@ -496,3 +600,40 @@ body {
 
   </body>
 </html>
+=======
+            <footer id="footer">
+              <div class="container">
+                <div class="col-md-8">
+                  <p>Designed and Developed by <a href="http://facebook.com/AvengedEndie">Nitin Prakash</a></p>
+                </div>
+                <div class="col-md-4">
+                  <!-- Social Media -->
+                  <ul class="social">
+                    <li>
+                      <a href="https://www.facebook.com/IEEE.LNMIIT/" class="Facebook">
+                        <i class="ion-social-facebook"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/LNMIIT_Jaipur" class="Twitter">
+                        <i class="ion-social-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.linkedin.com/company/ieee-sb-lnmiit/" class="Linkedin">
+                        <i class="ion-social-linkedin"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/IEEE-LNMIIT-SB">
+                        <i class="ion-social-github"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </footer> <!-- /#footer -->
+
+        </body>
+    </html>
+>>>>>>> new/master
